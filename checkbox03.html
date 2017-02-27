@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>	
+	<title>checkbox03</title>
+	<style>
+
+	input[type="checkbox"]{
+		opacity: 0;
+		height:13px;
+		width:13px;
+		margin:0;
+	}
+
+	label{
+		height:16px;
+		line-height: 16px;
+		font-size:14px;
+		background:url(2.png) no-repeat;
+		background-position:0px -2px;
+		background-size:100%;
+	}
+
+	.on{
+		background-position:0px -16px;
+	}
+
+	</style>
+</head>
+<body>
+
+
+<form action="" method="get" id="test">
+最喜欢的水果
+	
+	<label class="on" for="apple"><input name="fruit" type="checkbox" id="apple" checked/>苹果</label>
+	<label for="orange"><input name="fruit" type="checkbox" id="orange" value=""/>桔子</label>
+	<label for="watermelon"><input name="fruit" type="checkbox" id="watermelon" value=""/>西瓜</label>
+</form>
+<br><br>
+
+
+<script>
+	$("label").on("click",function(){
+  $(this).toggleClass( "on" );
+})
+
+	　document.getElementById("test").onclick = function(ev) {
+        　　console.log(ev.target);}
+</script>
+
+</body>
+</html>
