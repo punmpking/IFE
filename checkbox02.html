@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jquery-2.2.3.min.js"></script>
+	<title>checkbox02</title>
+	<style>
+	input[type="checkbox"]{
+		opacity:0;
+		/*width:50px;*/
+		height:20px;
+	}
+
+.checkBox+label::before{
+  margin:auto;
+  content:" ";
+  width:13px;
+  height:13px;
+  line-height:13px;
+  border:1px solid #d9d9d9;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+}
+
+.checkBox:checked+label::before{
+
+  content:'\2714';
+  color: red;
+  width:13px;
+  height:13px;
+  line-height:13px;
+  margin:auto;
+  text-align: center;
+  font-size: 12px;
+  display: inline-block;
+  border:1px solid #d73d32;
+  font-weight: 700;
+}
+	</style>
+</head>
+<body>
+
+
+<div class="checkbox">
+最喜欢的水果
+	<input name="fruit" type="checkbox" id="apple" class="checkBox"/>
+	
+	<label for="apple">苹果</label>
+	<input name="fruit" type="checkbox" id="orange" value="" class="checkBox"/>
+
+	<label for="orange">桔子</label>
+	<input name="fruit" type="checkbox" id="watermelon" value="" class="checkBox"/>
+
+	<label for="watermelon">西瓜</label>
+</div>
+<br><br>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
